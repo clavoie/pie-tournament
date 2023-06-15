@@ -1,0 +1,797 @@
+{
+    "poll": {
+        "question": "",
+        "questionMedia": "",
+        "startDate": null,
+        "endDate": null,
+        "choices": [],
+        "allowMultiChoice": false,
+        "enableComments": false,
+        "enableCaptcha": false,
+        "hideResults": false,
+        "restriction": "ip"
+    },
+    "bracketPoll": {
+        "title": "",
+        "titleMedia": "",
+        "hideRoundResults": false,
+        "enableCaptcha": false,
+        "participants": [],
+        "schedules": [],
+        "brackets": [],
+        "restriction": "ip"
+    },
+    "notification": {
+        "level": "info"
+    },
+    "screenSize": {
+        "width": 0,
+        "height": 0,
+        "isMobile": false
+    },
+    "user": {
+        "pollCreated": false,
+        "showAuthNotVerified": false,
+        "showAlreadyVoted": false,
+        "showVoteSuccess": false,
+        "embedMode": false,
+        "hasAdBlocker": false
+    },
+    "routing": {
+        "locationBeforeTransitions": null
+    },
+    "reduxAsyncConnect": {
+        "loaded": true,
+        "loadState": {
+            "response": {
+                "loading": false,
+                "loaded": true,
+                "error": null
+            }
+        },
+        "response": {
+            "status": 200,
+            "data": {
+                "brackets": [
+                    {
+                        "lastBrackets": null,
+                        "roundNumber": 1,
+                        "nextGame": 17,
+                        "bracketNumber": 1,
+                        "dummy": true,
+                        "poll": null
+                    },
+                    {
+                        "lastBrackets": null,
+                        "roundNumber": 1,
+                        "nextGame": 17,
+                        "bracketNumber": 2,
+                        "dummy": false,
+                        "poll": {
+                            "_id": "9BWgN-G6ZPYC",
+                            "choices": [
+                                {
+                                    "text": "Cranberry Apple ",
+                                    "voteCount": 1,
+                                    "votes": 1,
+                                    "choiceId": "6113086968800d2aadabf30c"
+                                },
+                                {
+                                    "text": "Cranberry Muffin ",
+                                    "voteCount": 2,
+                                    "votes": 2,
+                                    "choiceId": "6113086968800d2aadabf30b"
+                                }
+                            ],
+                            "restriction": "ip",
+                            "startDate": "2021-08-10T23:14:49.387Z",
+                            "endDate": "2021-08-14T00:00:00.000Z",
+                            "bracketPollShortId": "LT9bV_cHhq4"
+                        }
+                    },
+                    {
+                        "lastBrackets": null,
+                        "roundNumber": 1,
+                        "nextGame": 18,
+                        "bracketNumber": 3,
+                        "dummy": true,
+                        "poll": null
+                    },
+                    {
+                        "lastBrackets": null,
+                        "roundNumber": 1,
+                        "nextGame": 18,
+                        "bracketNumber": 4,
+                        "dummy": false,
+                        "poll": {
+                            "_id": "tsUX5TdbgPZw",
+                            "choices": [
+                                {
+                                    "text": "Cranberry Streusel ",
+                                    "voteCount": 2,
+                                    "votes": 2,
+                                    "choiceId": "6113086968800d2aadabf30e"
+                                },
+                                {
+                                    "text": "Egg Custard",
+                                    "voteCount": 1,
+                                    "votes": 1,
+                                    "choiceId": "6113086968800d2aadabf30d"
+                                }
+                            ],
+                            "restriction": "ip",
+                            "startDate": "2021-08-10T23:14:49.387Z",
+                            "endDate": "2021-08-14T00:00:00.000Z",
+                            "bracketPollShortId": "LT9bV_cHhq4"
+                        }
+                    },
+                    {
+                        "lastBrackets": null,
+                        "roundNumber": 1,
+                        "nextGame": 19,
+                        "bracketNumber": 5,
+                        "dummy": true,
+                        "poll": null
+                    },
+                    {
+                        "lastBrackets": null,
+                        "roundNumber": 1,
+                        "nextGame": 19,
+                        "bracketNumber": 6,
+                        "dummy": false,
+                        "poll": {
+                            "_id": "mwSKpJRn49l_",
+                            "choices": [
+                                {
+                                    "text": "French Coconut",
+                                    "voteCount": 2,
+                                    "votes": 2,
+                                    "choiceId": "6113086968800d2aadabf310"
+                                },
+                                {
+                                    "text": "Honey Pecan",
+                                    "voteCount": 1,
+                                    "votes": 1,
+                                    "choiceId": "6113086968800d2aadabf30f"
+                                }
+                            ],
+                            "restriction": "ip",
+                            "startDate": "2021-08-10T23:14:49.387Z",
+                            "endDate": "2021-08-14T00:00:00.000Z",
+                            "bracketPollShortId": "LT9bV_cHhq4"
+                        }
+                    },
+                    {
+                        "lastBrackets": null,
+                        "roundNumber": 1,
+                        "nextGame": 20,
+                        "bracketNumber": 7,
+                        "dummy": true,
+                        "poll": null
+                    },
+                    {
+                        "lastBrackets": null,
+                        "roundNumber": 1,
+                        "nextGame": 20,
+                        "bracketNumber": 8,
+                        "dummy": false,
+                        "poll": {
+                            "_id": "022FQ1oRR6ZZ",
+                            "choices": [
+                                {
+                                    "text": "Lemon Chess",
+                                    "voteCount": 2,
+                                    "votes": 2,
+                                    "choiceId": "6113086968800d2aadabf312"
+                                },
+                                {
+                                    "text": "Macaroon",
+                                    "voteCount": 1,
+                                    "votes": 1,
+                                    "choiceId": "6113086968800d2aadabf311"
+                                }
+                            ],
+                            "restriction": "ip",
+                            "startDate": "2021-08-10T23:14:49.387Z",
+                            "endDate": "2021-08-14T00:00:00.000Z",
+                            "bracketPollShortId": "LT9bV_cHhq4"
+                        }
+                    },
+                    {
+                        "lastBrackets": null,
+                        "roundNumber": 1,
+                        "nextGame": 21,
+                        "bracketNumber": 9,
+                        "dummy": true,
+                        "poll": null
+                    },
+                    {
+                        "lastBrackets": null,
+                        "roundNumber": 1,
+                        "nextGame": 21,
+                        "bracketNumber": 10,
+                        "dummy": false,
+                        "poll": {
+                            "_id": "Ou2cz2DTjSP6",
+                            "choices": [
+                                {
+                                    "text": "Maple Bourbon Walnut ",
+                                    "voteCount": 2,
+                                    "votes": 2,
+                                    "choiceId": "6113086968800d2aadabf314"
+                                },
+                                {
+                                    "text": "Mixed Berry",
+                                    "voteCount": 1,
+                                    "votes": 1,
+                                    "choiceId": "6113086968800d2aadabf313"
+                                }
+                            ],
+                            "restriction": "ip",
+                            "startDate": "2021-08-10T23:14:49.387Z",
+                            "endDate": "2021-08-14T00:00:00.000Z",
+                            "bracketPollShortId": "LT9bV_cHhq4"
+                        }
+                    },
+                    {
+                        "lastBrackets": null,
+                        "roundNumber": 1,
+                        "nextGame": 22,
+                        "bracketNumber": 11,
+                        "dummy": true,
+                        "poll": null
+                    },
+                    {
+                        "lastBrackets": null,
+                        "roundNumber": 1,
+                        "nextGame": 22,
+                        "bracketNumber": 12,
+                        "dummy": false,
+                        "poll": {
+                            "_id": "wkcuPpKHP-d-",
+                            "choices": [
+                                {
+                                    "text": "Monster Cookie",
+                                    "voteCount": 1,
+                                    "votes": 1,
+                                    "choiceId": "6113086968800d2aadabf316"
+                                },
+                                {
+                                    "text": "Orange Cranberry Custard ",
+                                    "voteCount": 2,
+                                    "votes": 2,
+                                    "choiceId": "6113086968800d2aadabf315"
+                                }
+                            ],
+                            "restriction": "ip",
+                            "startDate": "2021-08-10T23:14:49.387Z",
+                            "endDate": "2021-08-14T00:00:00.000Z",
+                            "bracketPollShortId": "LT9bV_cHhq4"
+                        }
+                    },
+                    {
+                        "lastBrackets": null,
+                        "roundNumber": 1,
+                        "nextGame": 23,
+                        "bracketNumber": 13,
+                        "dummy": true,
+                        "poll": null
+                    },
+                    {
+                        "lastBrackets": null,
+                        "roundNumber": 1,
+                        "nextGame": 23,
+                        "bracketNumber": 14,
+                        "dummy": true,
+                        "poll": null
+                    },
+                    {
+                        "lastBrackets": null,
+                        "roundNumber": 1,
+                        "nextGame": 24,
+                        "bracketNumber": 15,
+                        "dummy": true,
+                        "poll": null
+                    },
+                    {
+                        "lastBrackets": null,
+                        "roundNumber": 1,
+                        "nextGame": 24,
+                        "bracketNumber": 16,
+                        "dummy": false,
+                        "poll": {
+                            "_id": "GovZKrBKoSzj",
+                            "choices": [
+                                {
+                                    "text": "Oreo",
+                                    "voteCount": 1,
+                                    "votes": 1,
+                                    "choiceId": "6113086968800d2aadabf318"
+                                },
+                                {
+                                    "text": "Peach (Seasonal - Summer) ",
+                                    "voteCount": 2,
+                                    "votes": 2,
+                                    "choiceId": "6113086968800d2aadabf317"
+                                }
+                            ],
+                            "restriction": "ip",
+                            "startDate": "2021-08-10T23:14:49.387Z",
+                            "endDate": "2021-08-14T00:00:00.000Z",
+                            "bracketPollShortId": "LT9bV_cHhq4"
+                        }
+                    },
+                    {
+                        "lastBrackets": [
+                            1,
+                            2
+                        ],
+                        "roundNumber": 2,
+                        "nextGame": 25,
+                        "bracketNumber": 17,
+                        "dummy": false,
+                        "poll": {
+                            "_id": "5ua3R7PjGgm0",
+                            "choices": [
+                                {
+                                    "text": "Pumpkin",
+                                    "voteCount": 2,
+                                    "votes": 2,
+                                    "choiceId": "61170780d456d47f46ce7814"
+                                },
+                                {
+                                    "text": "Cranberry Muffin ",
+                                    "voteCount": 1,
+                                    "votes": 1,
+                                    "choiceId": "61170780d456d47f46ce7813"
+                                }
+                            ],
+                            "restriction": "ip",
+                            "startDate": "2021-08-14T00:00:00.000Z",
+                            "endDate": "2021-08-17T00:00:00.000Z",
+                            "bracketPollShortId": "LT9bV_cHhq4"
+                        }
+                    },
+                    {
+                        "lastBrackets": [
+                            3,
+                            4
+                        ],
+                        "roundNumber": 2,
+                        "nextGame": 25,
+                        "bracketNumber": 18,
+                        "dummy": false,
+                        "poll": {
+                            "_id": "z2n42KAxJWEq",
+                            "choices": [
+                                {
+                                    "text": "Pumpkin Cream Cheese ",
+                                    "voteCount": 2,
+                                    "votes": 2,
+                                    "choiceId": "61170780d456d47f46ce7816"
+                                },
+                                {
+                                    "text": "Cranberry Streusel ",
+                                    "voteCount": 1,
+                                    "votes": 1,
+                                    "choiceId": "61170780d456d47f46ce7815"
+                                }
+                            ],
+                            "restriction": "ip",
+                            "startDate": "2021-08-14T00:00:00.000Z",
+                            "endDate": "2021-08-17T00:00:00.000Z",
+                            "bracketPollShortId": "LT9bV_cHhq4"
+                        }
+                    },
+                    {
+                        "lastBrackets": [
+                            5,
+                            6
+                        ],
+                        "roundNumber": 2,
+                        "nextGame": 26,
+                        "bracketNumber": 19,
+                        "dummy": false,
+                        "poll": {
+                            "_id": "r5aV3AzIauF3",
+                            "choices": [
+                                {
+                                    "text": "Raspberry Muffin",
+                                    "voteCount": 1,
+                                    "votes": 1,
+                                    "choiceId": "61170780d456d47f46ce7818"
+                                },
+                                {
+                                    "text": "French Coconut",
+                                    "voteCount": 2,
+                                    "votes": 2,
+                                    "choiceId": "61170780d456d47f46ce7817"
+                                }
+                            ],
+                            "restriction": "ip",
+                            "startDate": "2021-08-14T00:00:00.000Z",
+                            "endDate": "2021-08-17T00:00:00.000Z",
+                            "bracketPollShortId": "LT9bV_cHhq4"
+                        }
+                    },
+                    {
+                        "lastBrackets": [
+                            7,
+                            8
+                        ],
+                        "roundNumber": 2,
+                        "nextGame": 26,
+                        "bracketNumber": 20,
+                        "dummy": false,
+                        "poll": {
+                            "_id": "XshAaS0AklwS",
+                            "choices": [
+                                {
+                                    "text": "Razzelberry",
+                                    "voteCount": 2,
+                                    "votes": 2,
+                                    "choiceId": "61170780d456d47f46ce781a"
+                                },
+                                {
+                                    "text": "Lemon Chess",
+                                    "voteCount": 1,
+                                    "votes": 1,
+                                    "choiceId": "61170780d456d47f46ce7819"
+                                }
+                            ],
+                            "restriction": "ip",
+                            "startDate": "2021-08-14T00:00:00.000Z",
+                            "endDate": "2021-08-17T00:00:00.000Z",
+                            "bracketPollShortId": "LT9bV_cHhq4"
+                        }
+                    },
+                    {
+                        "lastBrackets": [
+                            9,
+                            10
+                        ],
+                        "roundNumber": 2,
+                        "nextGame": 27,
+                        "bracketNumber": 21,
+                        "dummy": false,
+                        "poll": {
+                            "_id": "OeWx-TxiOsYQ",
+                            "choices": [
+                                {
+                                    "text": "S'mores",
+                                    "voteCount": 0,
+                                    "votes": 0,
+                                    "choiceId": "61170780d456d47f46ce781c"
+                                },
+                                {
+                                    "text": "Maple Bourbon Walnut ",
+                                    "voteCount": 3,
+                                    "votes": 3,
+                                    "choiceId": "61170780d456d47f46ce781b"
+                                }
+                            ],
+                            "restriction": "ip",
+                            "startDate": "2021-08-14T00:00:00.000Z",
+                            "endDate": "2021-08-17T00:00:00.000Z",
+                            "bracketPollShortId": "LT9bV_cHhq4"
+                        }
+                    },
+                    {
+                        "lastBrackets": [
+                            11,
+                            12
+                        ],
+                        "roundNumber": 2,
+                        "nextGame": 27,
+                        "bracketNumber": 22,
+                        "dummy": false,
+                        "poll": {
+                            "_id": "JAdY6Dvon2mC",
+                            "choices": [
+                                {
+                                    "text": "Samoa",
+                                    "voteCount": 1,
+                                    "votes": 1,
+                                    "choiceId": "61170780d456d47f46ce781e"
+                                },
+                                {
+                                    "text": "Orange Cranberry Custard ",
+                                    "voteCount": 2,
+                                    "votes": 2,
+                                    "choiceId": "61170780d456d47f46ce781d"
+                                }
+                            ],
+                            "restriction": "ip",
+                            "startDate": "2021-08-14T00:00:00.000Z",
+                            "endDate": "2021-08-17T00:00:00.000Z",
+                            "bracketPollShortId": "LT9bV_cHhq4"
+                        }
+                    },
+                    {
+                        "lastBrackets": [
+                            13,
+                            14
+                        ],
+                        "roundNumber": 2,
+                        "nextGame": 28,
+                        "bracketNumber": 23,
+                        "dummy": false,
+                        "poll": {
+                            "_id": "HX6Th_200-so",
+                            "choices": [
+                                {
+                                    "text": "Shoofly",
+                                    "voteCount": 0,
+                                    "votes": 0,
+                                    "choiceId": "6113086968800d2aadabf326"
+                                },
+                                {
+                                    "text": "Southern Oatmeal Rum Raisin ",
+                                    "voteCount": 3,
+                                    "votes": 3,
+                                    "choiceId": "6113086968800d2aadabf325"
+                                }
+                            ],
+                            "restriction": "ip",
+                            "startDate": "2021-08-14T00:00:00.000Z",
+                            "endDate": "2021-08-17T00:00:00.000Z",
+                            "bracketPollShortId": "LT9bV_cHhq4"
+                        }
+                    },
+                    {
+                        "lastBrackets": [
+                            15,
+                            16
+                        ],
+                        "roundNumber": 2,
+                        "nextGame": 28,
+                        "bracketNumber": 24,
+                        "dummy": false,
+                        "poll": {
+                            "_id": "onNkY6NCLpm8",
+                            "choices": [
+                                {
+                                    "text": "Southern Velvet",
+                                    "voteCount": 1,
+                                    "votes": 1,
+                                    "choiceId": "61170780d456d47f46ce7820"
+                                },
+                                {
+                                    "text": "Peach (Seasonal - Summer) ",
+                                    "voteCount": 2,
+                                    "votes": 2,
+                                    "choiceId": "61170780d456d47f46ce781f"
+                                }
+                            ],
+                            "restriction": "ip",
+                            "startDate": "2021-08-14T00:00:00.000Z",
+                            "endDate": "2021-08-17T00:00:00.000Z",
+                            "bracketPollShortId": "LT9bV_cHhq4"
+                        }
+                    },
+                    {
+                        "lastBrackets": [
+                            17,
+                            18
+                        ],
+                        "roundNumber": 3,
+                        "nextGame": 29,
+                        "bracketNumber": 25,
+                        "dummy": false,
+                        "poll": {
+                            "_id": "f9wVf8K4jrutD",
+                            "choices": [
+                                {
+                                    "text": "Pumpkin",
+                                    "voteCount": 2,
+                                    "votes": 2,
+                                    "choiceId": "611afc00bb75ce692c830bbf"
+                                },
+                                {
+                                    "text": "Pumpkin Cream Cheese ",
+                                    "voteCount": 1,
+                                    "votes": 1,
+                                    "choiceId": "611afc00bb75ce692c830bbe"
+                                }
+                            ],
+                            "restriction": "ip",
+                            "startDate": "2021-08-17T00:00:00.000Z",
+                            "endDate": "2021-08-21T00:00:00.000Z",
+                            "bracketPollShortId": "LT9bV_cHhq4"
+                        }
+                    },
+                    {
+                        "lastBrackets": [
+                            19,
+                            20
+                        ],
+                        "roundNumber": 3,
+                        "nextGame": 29,
+                        "bracketNumber": 26,
+                        "dummy": false,
+                        "poll": {
+                            "_id": "S3DTmBuqgIpbL",
+                            "choices": [
+                                {
+                                    "text": "French Coconut",
+                                    "voteCount": 0,
+                                    "votes": 0,
+                                    "choiceId": "611afc00bb75ce692c830bc1"
+                                },
+                                {
+                                    "text": "Razzelberry",
+                                    "voteCount": 3,
+                                    "votes": 3,
+                                    "choiceId": "611afc00bb75ce692c830bc0"
+                                }
+                            ],
+                            "restriction": "ip",
+                            "startDate": "2021-08-17T00:00:00.000Z",
+                            "endDate": "2021-08-21T00:00:00.000Z",
+                            "bracketPollShortId": "LT9bV_cHhq4"
+                        }
+                    },
+                    {
+                        "lastBrackets": [
+                            21,
+                            22
+                        ],
+                        "roundNumber": 3,
+                        "nextGame": 30,
+                        "bracketNumber": 27,
+                        "dummy": false,
+                        "poll": {
+                            "_id": "HM8QjUMJsCB3x",
+                            "choices": [
+                                {
+                                    "text": "Maple Bourbon Walnut ",
+                                    "voteCount": 2,
+                                    "votes": 2,
+                                    "choiceId": "611afc00bb75ce692c830bc3"
+                                },
+                                {
+                                    "text": "Orange Cranberry Custard ",
+                                    "voteCount": 1,
+                                    "votes": 1,
+                                    "choiceId": "611afc00bb75ce692c830bc2"
+                                }
+                            ],
+                            "restriction": "ip",
+                            "startDate": "2021-08-17T00:00:00.000Z",
+                            "endDate": "2021-08-21T00:00:00.000Z",
+                            "bracketPollShortId": "LT9bV_cHhq4"
+                        }
+                    },
+                    {
+                        "lastBrackets": [
+                            23,
+                            24
+                        ],
+                        "roundNumber": 3,
+                        "nextGame": 30,
+                        "bracketNumber": 28,
+                        "dummy": false,
+                        "poll": {
+                            "_id": "DU-0yulLWQJPn",
+                            "choices": [
+                                {
+                                    "text": "Southern Oatmeal Rum Raisin ",
+                                    "voteCount": 1,
+                                    "votes": 1,
+                                    "choiceId": "611afc00bb75ce692c830bc5"
+                                },
+                                {
+                                    "text": "Peach (Seasonal - Summer) ",
+                                    "voteCount": 2,
+                                    "votes": 2,
+                                    "choiceId": "611afc00bb75ce692c830bc4"
+                                }
+                            ],
+                            "restriction": "ip",
+                            "startDate": "2021-08-17T00:00:00.000Z",
+                            "endDate": "2021-08-21T00:00:00.000Z",
+                            "bracketPollShortId": "LT9bV_cHhq4"
+                        }
+                    },
+                    {
+                        "lastBrackets": [
+                            25,
+                            26
+                        ],
+                        "roundNumber": 4,
+                        "nextGame": 31,
+                        "bracketNumber": 29,
+                        "dummy": false,
+                        "poll": {
+                            "_id": "CBBcSIutmlKqS",
+                            "choices": [
+                                {
+                                    "text": "Pumpkin",
+                                    "voteCount": 2,
+                                    "votes": 2,
+                                    "choiceId": "6120420031f77a2b2fa9ddcd"
+                                },
+                                {
+                                    "text": "Razzelberry",
+                                    "voteCount": 1,
+                                    "votes": 1,
+                                    "choiceId": "6120420031f77a2b2fa9ddcc"
+                                }
+                            ],
+                            "restriction": "ip",
+                            "startDate": "2021-08-21T00:00:00.000Z",
+                            "endDate": "2021-08-24T00:00:00.000Z",
+                            "bracketPollShortId": "LT9bV_cHhq4"
+                        }
+                    },
+                    {
+                        "lastBrackets": [
+                            27,
+                            28
+                        ],
+                        "roundNumber": 4,
+                        "nextGame": 31,
+                        "bracketNumber": 30,
+                        "dummy": false,
+                        "poll": {
+                            "_id": "DkRquU_5BAmds",
+                            "choices": [
+                                {
+                                    "text": "Maple Bourbon Walnut ",
+                                    "voteCount": 2,
+                                    "votes": 2,
+                                    "choiceId": "6120420031f77a2b2fa9ddcf"
+                                },
+                                {
+                                    "text": "Peach (Seasonal - Summer) ",
+                                    "voteCount": 1,
+                                    "votes": 1,
+                                    "choiceId": "6120420031f77a2b2fa9ddce"
+                                }
+                            ],
+                            "restriction": "ip",
+                            "startDate": "2021-08-21T00:00:00.000Z",
+                            "endDate": "2021-08-24T00:00:00.000Z",
+                            "bracketPollShortId": "LT9bV_cHhq4"
+                        }
+                    },
+                    {
+                        "lastBrackets": [
+                            29,
+                            30
+                        ],
+                        "roundNumber": 5,
+                        "nextGame": null,
+                        "bracketNumber": 31,
+                        "dummy": false,
+                        "poll": {
+                            "_id": "Jrp2gHaBy7ASF",
+                            "choices": [
+                                {
+                                    "text": "Pumpkin",
+                                    "voteCount": 2,
+                                    "votes": 2,
+                                    "choiceId": "612436800395571e95c6e597"
+                                },
+                                {
+                                    "text": "Maple Bourbon Walnut ",
+                                    "voteCount": 1,
+                                    "votes": 1,
+                                    "choiceId": "612436800395571e95c6e596"
+                                }
+                            ],
+                            "restriction": "ip",
+                            "startDate": "2021-08-24T00:00:00.000Z",
+                            "endDate": "2021-08-28T00:00:00.000Z",
+                            "bracketPollShortId": "LT9bV_cHhq4"
+                        }
+                    }
+                ],
+                "title": "Pie City Tournament - 2",
+                "titleMedia": "http://cdn.sallysbakingaddiction.com/wp-content/uploads/2017/06/american-flag-pie.jpg",
+                "hideRoundResults": true,
+                "shortId": "LT9bV_cHhq4"
+            }
+        }
+    }
+}
