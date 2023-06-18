@@ -8,7 +8,7 @@ import (
 	"strconv"
 )
 
-var filePattern = regexp.MustCompile(`^year-(\d)-bracket-\d.json$`)
+var filePattern = regexp.MustCompile(`^year-(\d)-bracket-(\d).json$`)
 
 func processAllBracketsInCurrentDir() {
 	files, err := os.ReadDir(".")
@@ -30,6 +30,11 @@ func processAllBracketsInCurrentDir() {
 		}
 
 		year, err := strconv.Atoi(nameMatches[1])
+		if err != nil {
+			log.Fatal(fileName, err)
+		}
+
+		bracketNumber, err := strconv.Atoi(nameMatches[2])
 		if err != nil {
 			log.Fatal(fileName, err)
 		}
@@ -62,7 +67,7 @@ func processAllBracketsInCurrentDir() {
 				continue
 			}
 
-			pieMatches.AddMatch(year, bracket)
+			pieMatches.AddMatch(year, bracketNumber, bracket)
 		}
 	}
 }

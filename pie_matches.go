@@ -7,16 +7,14 @@ import (
 )
 
 type PieMatches struct {
-	matches       []*PieMatch
 	matchesByYear PieMatchesByYear
 }
 
 var pieMatches *PieMatches = &PieMatches{
-	matches:       make([]*PieMatch, 0, 128),
 	matchesByYear: NewPieMatchesByYear(),
 }
 
-func (pm *PieMatches) AddMatch(year int, bracket *Bracket) {
+func (pm *PieMatches) AddMatch(year, bracketNumber int, bracket *Bracket) {
 	poll := bracket.Poll
 	if len(poll.Choices) != 2 {
 		log.Fatal("Unhandled number of choices", poll.Choices)
@@ -34,10 +32,10 @@ func (pm *PieMatches) AddMatch(year int, bracket *Bracket) {
 	pieA := pies.AddIfMissing(choiceA.Text)
 	pieB := pies.AddIfMissing(choiceB.Text)
 	matchesByPie := pm.matchesByYear.AddIfMissing(year)
-	matchesByPie.AddByeIfMissing(year, bracket, pieA)
-	matchesByPie.AddByeIfMissing(year, bracket, pieB)
-	matchesByPie.Add(NewPieMatch(year, matchesByPie.NumMatches(pieA), bracket, choiceA, choiceB))
-	matchesByPie.Add(NewPieMatch(year, matchesByPie.NumMatches(pieB), bracket, choiceB, choiceA))
+	matchesByPie.AddByeIfMissing(year, bracketNumber, bracket, pieA)
+	matchesByPie.AddByeIfMissing(year, bracketNumber, bracket, pieB)
+	matchesByPie.Add(NewPieMatch(year, bracketNumber, matchesByPie.NumMatches(pieA), bracket, choiceA, choiceB))
+	matchesByPie.Add(NewPieMatch(year, bracketNumber, matchesByPie.NumMatches(pieB), bracket, choiceB, choiceA))
 }
 
 func (pm *PieMatches) WriteAllMatchResults(fileName string) error {

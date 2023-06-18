@@ -11,9 +11,9 @@ func (pmbp PieMatchesByPie) Add(pm *PieMatch) {
 	pmbp[pm.Pie] = append(pmbp[pm.Pie], pm)
 }
 
-func (pmbp PieMatchesByPie) AddByeIfMissing(year int, bracket *Bracket, p *Pie) {
+func (pmbp PieMatchesByPie) AddByeIfMissing(year, bracketNumber int, bracket *Bracket, p *Pie) {
 	if bracket.RoundNumber > 1 && pmbp.NumMatches(p) == 0 {
-		pmbp[p] = append(pmbp[p], NewByePieMatch(year, bracket, p))
+		pmbp[p] = append(pmbp[p], NewByePieMatch(year, bracketNumber, bracket, p))
 	}
 }
 
