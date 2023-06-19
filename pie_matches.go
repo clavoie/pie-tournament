@@ -38,6 +38,27 @@ func (pm *PieMatches) AddMatch(year, bracketNumber int, bracket *Bracket) {
 	matchesByPie.Add(NewPieMatch(year, bracketNumber, matchesByPie.NumMatches(pieB), bracket, choiceB, choiceA))
 }
 
+func (pm *PieMatches) ImportFromIntermediate(intermediatePieMatch *intermediatePieMatch) {
+	pieA := pies.AddIfMissing(intermediatePieMatch.PieA)
+	pieB := pies.AddIfMissing(intermediatePieMatch.PieB)
+	matchesByPie := pm.matchesByYear.AddIfMissing(intermediatePieMatch.Year)
+
+	pieA.AddByeIfMissing(intermediatePieMatch)
+	pieB.AddByeIfMissing(intermediatePieMatch)
+
+	matchesByPie.AddByeIfMissingFromIntermediate(intermediatePieMatch, pieA)
+	matchesByPie.AddByeIfMissingFromIntermediate(intermediatePieMatch, pieB)
+
+	newMatchA := NewPieMatchFromIntermediate(matchesByPie.NumMatches(pieA), intermediatePieMatch.PieAVotes, intermediatePieMatch.PieBVotes, intermediatePieMatch, pieA, pieB)
+	newMatchB := NewPieMatchFromIntermediate(matchesByPie.NumMatches(pieB), intermediatePieMatch.PieBVotes, intermediatePieMatch.PieAVotes, intermediatePieMatch, pieB, pieA)
+
+	matchesByPie.Add(newMatchA)
+	matchesByPie.Add(newMatchB)
+
+	pieA.AddMatch(newMatchA)
+	pieB.AddMatch(newMatchB)
+}
+
 func (pm *PieMatches) WriteAllMatchResults(fileName string) error {
 	csvFile, err := os.Create(fileName)
 	if err != nil {
