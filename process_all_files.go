@@ -67,7 +67,11 @@ func processAllBracketsInCurrentDir() {
 				continue
 			}
 
-			pieMatches.AddMatch(year, bracketNumber, bracket)
+			sortableIntermediatePieMatches.AddIntermediateMatch(year, bracketNumber, bracket)
+			// pieMatches.AddMatch(year, bracketNumber, bracket)
 		}
 	}
+
+	sortableIntermediatePieMatches.Sort()
+	sortableIntermediatePieMatches.ImportAllIntoPieMatches()
 }

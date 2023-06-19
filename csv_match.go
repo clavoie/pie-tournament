@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 var csvMatchHeader []string = []string{
-	"MatchId", "Year", "TournamentRound", "PieRound", "Pie", "Votes", "Opponent", "OpponentVotes",
+	"MatchId", "Year", "TournamentRound", "PieRound", "Pie", "Votes", "Opponent", "OpponentVotes", "Result",
 }
 
 type CsvMatch struct {
@@ -15,6 +15,7 @@ type CsvMatch struct {
 	Votes           string
 	Opponent        string
 	OpponentVotes   string
+	Result          string
 }
 
 func NewCsvMatch(pm *PieMatch) *CsvMatch {
@@ -26,6 +27,7 @@ func NewCsvMatch(pm *PieMatch) *CsvMatch {
 			PieRound:        fmt.Sprint(pm.MatchNumberForPie),
 			Pie:             pm.Pie.Name,
 			Votes:           fmt.Sprint(pm.VotesForPie),
+			Result:          pm.Result.String(),
 		}
 	}
 
@@ -38,11 +40,12 @@ func NewCsvMatch(pm *PieMatch) *CsvMatch {
 		Votes:           fmt.Sprint(pm.VotesForPie),
 		Opponent:        pm.Opponent.Name,
 		OpponentVotes:   fmt.Sprint(pm.VotesForOpponent),
+		Result:          pm.Result.String(),
 	}
 }
 
 func (cm *CsvMatch) ToCsv() []string {
 	return []string{
-		cm.MatchId, cm.Year, cm.TournamentRound, cm.PieRound, cm.Pie, cm.Votes, cm.Opponent, cm.OpponentVotes,
+		cm.MatchId, cm.Year, cm.TournamentRound, cm.PieRound, cm.Pie, cm.Votes, cm.Opponent, cm.OpponentVotes, cm.Result,
 	}
 }
