@@ -79,14 +79,25 @@ func (pm *PieMatches) WriteAllMatchResults(fileName string) error {
 		return err
 	}
 
-	for year := range pm.matchesByYear {
-		yearMatches := pm.matchesByYear[year]
-		for pie := range yearMatches {
-			for _, match := range yearMatches[pie] {
-				err = csvWriter.Write(NewCsvMatch(match).ToCsv())
+	// for year := range pm.matchesByYear {
+	// 	yearMatches := pm.matchesByYear[year]
+	// 	for pie := range yearMatches {
+	// 		for _, match := range yearMatches[pie] {
+	// 			err = csvWriter.Write(NewCsvMatch(match).ToCsv())
+
+	// 			if err != nil {
+	// 				return nil
+	// 			}
+	// 		}
+	// 	}
+	// }
+	for _, pie := range pies {
+		for _, pieMatches := range pie.MatchesByYear {
+			for _, pieMatch := range pieMatches {
+				err = csvWriter.Write(NewCsvMatch(pieMatch).ToCsv())
 
 				if err != nil {
-					return nil
+					return err
 				}
 			}
 		}

@@ -27,6 +27,55 @@ func (p *Pie) AddMatch(pieMatch *PieMatch) {
 	p.PointsByYear[year] += pieMatch.VotesForPie * pieMatch.MatchNumberForPie
 }
 
+func (p *Pie) ConvertTiesToTiesWL() {
+	exceptions := map[int][]string{
+		2: {"Strawberry Blackberry", "Atlantic Beach", "Black Bottom Mocha", "Bourbon Chocolate Pecan"},
+	}
+	for year, pieMatches := range p.MatchesByYear {
+		for index, pieMatch := range pieMatches {
+			if pieMatch.Result != Tie {
+				continue
+			}
+
+			if (index + 1) >= len(pieMatches) {
+				exs, hasException := exceptions[year]
+				exFound := false
+
+				if hasException {
+					for _, ex := range exs {
+						if p.Name == ex {
+							exFound = true
+							break
+						}
+					}
+				}
+
+				if exFound {
+					pieMatch.Result = TieWin
+				} else {
+					pieMatch.Result = TieLoss
+				}
+			} else {
+				pieMatch.Result = TieWin
+			}
+		}
+	}
+}
+
 func (p *Pie) NumMatches(year int) int {
 	return len(p.MatchesByYear[year])
+}
+
+func (p *Pie) NumNonByeMatches(year int) int {
+	count := 0
+
+	for _, match := range p.MatchesByYear[year] {
+		if match.Result == Bye {
+			continue
+		}
+
+		count++
+	}
+
+	return count
 }

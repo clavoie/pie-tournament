@@ -15,3 +15,9 @@ func (ps Pies) AddIfMissing(pieName string) *Pie {
 	ps[pieName] = pie
 	return pie
 }
+
+func (ps Pies) ConvertTiesToTiesWL() {
+	for _, pie := range ps {
+		pie.ConvertTiesToTiesWL()
+	}
+}

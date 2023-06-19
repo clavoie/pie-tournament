@@ -7,6 +7,8 @@ const (
 	Win PieMatchResult = iota
 	Loss
 	Tie
+	TieLoss
+	TieWin
 	Bye
 )
 

@@ -11,12 +11,14 @@ func _() {
 	_ = x[Win-0]
 	_ = x[Loss-1]
 	_ = x[Tie-2]
-	_ = x[Bye-3]
+	_ = x[TieLoss-3]
+	_ = x[TieWin-4]
+	_ = x[Bye-5]
 }
 
-const _PieMatchResult_name = "WinLossTieBye"
+const _PieMatchResult_name = "WinLossTieTieLossTieWinBye"
 
-var _PieMatchResult_index = [...]uint8{0, 3, 7, 10, 13}
+var _PieMatchResult_index = [...]uint8{0, 3, 7, 10, 17, 23, 26}
 
 func (i PieMatchResult) String() string {
 	if i < 0 || i >= PieMatchResult(len(_PieMatchResult_index)-1) {

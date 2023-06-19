@@ -55,9 +55,22 @@ func (ipm *intermediatePieMatches) AddIntermediateMatch(year, bracketNumber int,
 	})
 }
 
-func (ipm *intermediatePieMatches) ImportAllIntoPieMatches() {
-	for _, intermediateMatch := range ipm.Sortable {
-		pieMatches.ImportFromIntermediate(intermediateMatch)
+func (ipm *intermediatePieMatches) ImportAllIntoPies() {
+	ipm.Sort()
+
+	for _, intermediatePieMatch := range ipm.Sortable {
+		pieA := pies.AddIfMissing(intermediatePieMatch.PieA)
+		pieB := pies.AddIfMissing(intermediatePieMatch.PieB)
+
+		pieA.AddByeIfMissing(intermediatePieMatch)
+		pieB.AddByeIfMissing(intermediatePieMatch)
+
+		year := intermediatePieMatch.Year
+		newMatchA := NewPieMatchFromIntermediate(pieA.NumNonByeMatches(year), intermediatePieMatch.PieAVotes, intermediatePieMatch.PieBVotes, intermediatePieMatch, pieA, pieB)
+		newMatchB := NewPieMatchFromIntermediate(pieB.NumNonByeMatches(year), intermediatePieMatch.PieBVotes, intermediatePieMatch.PieAVotes, intermediatePieMatch, pieB, pieA)
+
+		pieA.AddMatch(newMatchA)
+		pieB.AddMatch(newMatchB)
 	}
 }
 
