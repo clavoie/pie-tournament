@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type Pie struct {
 	Name          string
 	PointsByYear  map[int]int
@@ -78,4 +80,14 @@ func (p *Pie) NumNonByeMatches(year int) int {
 	}
 
 	return count
+}
+
+func (p *Pie) CsvPieRankRecord() []string {
+	return []string{
+		p.Name,
+		fmt.Sprint(p.PointsByYear[1]),
+		fmt.Sprint(p.PointsByYear[2]),
+		fmt.Sprint(p.PointsByYear[2] - p.PointsByYear[1]),
+		fmt.Sprint(p.PointsByYear[2] + p.PointsByYear[1]),
+	}
 }

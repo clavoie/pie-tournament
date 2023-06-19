@@ -11,4 +11,9 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	err = pieMatches.WriteAllRanks("results-from-go-ranks.csv")
+	if err != nil {
+		log.Fatal(err)
+	}
 }

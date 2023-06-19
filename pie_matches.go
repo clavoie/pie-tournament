@@ -79,18 +79,6 @@ func (pm *PieMatches) WriteAllMatchResults(fileName string) error {
 		return err
 	}
 
-	// for year := range pm.matchesByYear {
-	// 	yearMatches := pm.matchesByYear[year]
-	// 	for pie := range yearMatches {
-	// 		for _, match := range yearMatches[pie] {
-	// 			err = csvWriter.Write(NewCsvMatch(match).ToCsv())
-
-	// 			if err != nil {
-	// 				return nil
-	// 			}
-	// 		}
-	// 	}
-	// }
 	for _, pie := range pies {
 		for _, pieMatches := range pie.MatchesByYear {
 			for _, pieMatch := range pieMatches {
@@ -100,6 +88,43 @@ func (pm *PieMatches) WriteAllMatchResults(fileName string) error {
 					return err
 				}
 			}
+		}
+	}
+
+	csvWriter.Flush()
+	err = csvWriter.Error()
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (pm *PieMatches) WriteAllRanks(fileName string) error {
+	csvFile, err := os.Create(fileName)
+	if err != nil {
+		return err
+	}
+
+	defer func() {
+		err = csvFile.Close()
+
+		if err != nil {
+			log.Fatal(err)
+		}
+	}()
+
+	csvWriter := csv.NewWriter(csvFile)
+	err = csvWriter.Write(csvPieRankHeader)
+	if err != nil {
+		return err
+	}
+
+	for _, pie := range pies {
+		err = csvWriter.Write(pie.CsvPieRankRecord())
+
+		if err != nil {
+			return err
 		}
 	}
 
