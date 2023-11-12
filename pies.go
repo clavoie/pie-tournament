@@ -1,10 +1,13 @@
 package main
 
+import "strings"
+
 type Pies map[string]*Pie
 
 var pies Pies = make(Pies)
 
 func (ps Pies) AddIfMissing(pieName string) *Pie {
+	pieName = strings.TrimSpace(pieName)
 	pie, exists := ps[pieName]
 
 	if exists {

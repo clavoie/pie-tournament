@@ -23,9 +23,10 @@ type PieMatch struct {
 	TournamentRound   int
 	Year              int
 	BracketNumber     int
+	BracketType       string
 }
 
-func NewByePieMatch(year, bracketNumber int, b *Bracket, p *Pie) *PieMatch {
+func NewByePieMatch(year, bracketNumber int, bracketType string, b *Bracket, p *Pie) *PieMatch {
 	return &PieMatch{
 		Pie:               p,
 		VotesForPie:       0,
@@ -34,6 +35,7 @@ func NewByePieMatch(year, bracketNumber int, b *Bracket, p *Pie) *PieMatch {
 		TournamentRound:   b.RoundNumber - 1,
 		Year:              year,
 		BracketNumber:     bracketNumber,
+		BracketType:       bracketType,
 	}
 }
 
@@ -46,10 +48,11 @@ func NewByePieMatchFromIntermediate(intermediatePieMatch *intermediatePieMatch, 
 		TournamentRound:   intermediatePieMatch.Round - 1,
 		Year:              intermediatePieMatch.Year,
 		BracketNumber:     intermediatePieMatch.Bracket,
+		BracketType:       intermediatePieMatch.BracketType,
 	}
 }
 
-func NewPieMatch(year, bracketNumber, currentPieMatches int, b *Bracket, pieChoice, opponentChoice *PollChoice) *PieMatch {
+func NewPieMatch(year, bracketNumber, currentPieMatches int, bracketType string, b *Bracket, pieChoice, opponentChoice *PollChoice) *PieMatch {
 	result := Tie
 
 	if pieChoice.Votes > opponentChoice.Votes {
@@ -69,6 +72,7 @@ func NewPieMatch(year, bracketNumber, currentPieMatches int, b *Bracket, pieChoi
 		TournamentRound:   b.RoundNumber,
 		Year:              year,
 		BracketNumber:     bracketNumber,
+		BracketType:       bracketType,
 	}
 }
 
@@ -93,5 +97,6 @@ func NewPieMatchFromIntermediate(currentPieMatches, votes, opponentVotes int, in
 		TournamentRound:   interintermediatePieMatch.Round,
 		Year:              interintermediatePieMatch.Year,
 		BracketNumber:     interintermediatePieMatch.Bracket,
+		BracketType:       interintermediatePieMatch.BracketType,
 	}
 }

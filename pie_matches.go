@@ -14,7 +14,7 @@ var pieMatches *PieMatches = &PieMatches{
 	matchesByYear: NewPieMatchesByYear(),
 }
 
-func (pm *PieMatches) AddMatch(year, bracketNumber int, bracket *Bracket) {
+func (pm *PieMatches) AddMatch(year, bracketNumber int, bracketType string, bracket *Bracket) {
 	poll := bracket.Poll
 	if len(poll.Choices) != 2 {
 		log.Fatal("Unhandled number of choices", poll.Choices)
@@ -32,10 +32,10 @@ func (pm *PieMatches) AddMatch(year, bracketNumber int, bracket *Bracket) {
 	pieA := pies.AddIfMissing(choiceA.Text)
 	pieB := pies.AddIfMissing(choiceB.Text)
 	matchesByPie := pm.matchesByYear.AddIfMissing(year)
-	matchesByPie.AddByeIfMissing(year, bracketNumber, bracket, pieA)
-	matchesByPie.AddByeIfMissing(year, bracketNumber, bracket, pieB)
-	matchesByPie.Add(NewPieMatch(year, bracketNumber, matchesByPie.NumMatches(pieA), bracket, choiceA, choiceB))
-	matchesByPie.Add(NewPieMatch(year, bracketNumber, matchesByPie.NumMatches(pieB), bracket, choiceB, choiceA))
+	matchesByPie.AddByeIfMissing(year, bracketNumber, bracketType, bracket, pieA)
+	matchesByPie.AddByeIfMissing(year, bracketNumber, bracketType, bracket, pieB)
+	matchesByPie.Add(NewPieMatch(year, bracketNumber, matchesByPie.NumMatches(pieA), bracketType, bracket, choiceA, choiceB))
+	matchesByPie.Add(NewPieMatch(year, bracketNumber, matchesByPie.NumMatches(pieB), bracketType, bracket, choiceB, choiceA))
 }
 
 func (pm *PieMatches) ImportFromIntermediate(intermediatePieMatch *intermediatePieMatch) {

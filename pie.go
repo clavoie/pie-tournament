@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 type Pie struct {
 	Name          string
@@ -9,6 +12,7 @@ type Pie struct {
 }
 
 func NewPie(name string) *Pie {
+	name = strings.TrimSpace(name)
 	return &Pie{
 		Name:          name,
 		PointsByYear:  map[int]int{},
@@ -26,7 +30,14 @@ func (p *Pie) AddByeIfMissing(intermediatePieMatch *intermediatePieMatch) {
 func (p *Pie) AddMatch(pieMatch *PieMatch) {
 	year := pieMatch.Year
 	p.MatchesByYear[year] = append(p.MatchesByYear[year], pieMatch)
-	p.PointsByYear[year] += pieMatch.VotesForPie * pieMatch.MatchNumberForPie
+
+	if pieMatch.BracketType == "losers" {
+		if pieMatch.VotesForPie > pieMatch.VotesForOpponent {
+			p.PointsByYear[year] += 1 // * pieMatch.MatchNumberForPie
+		}
+	} else {
+		p.PointsByYear[year] += pieMatch.VotesForPie * pieMatch.MatchNumberForPie
+	}
 }
 
 func (p *Pie) ConvertTiesToTiesWL() {

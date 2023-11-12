@@ -3,17 +3,19 @@ package main
 import (
 	"log"
 	"sort"
+	"strings"
 )
 
 type intermediatePieMatch struct {
-	Id        string
-	Year      int
-	Bracket   int
-	Round     int
-	PieA      string
-	PieAVotes int
-	PieB      string
-	PieBVotes int
+	Id          string
+	Year        int
+	Bracket     int
+	BracketType string
+	Round       int
+	PieA        string
+	PieAVotes   int
+	PieB        string
+	PieBVotes   int
 }
 
 type intermediatePieMatches struct {
@@ -24,7 +26,7 @@ var sortableIntermediatePieMatches = &intermediatePieMatches{
 	Sortable: make([]*intermediatePieMatch, 0, 128),
 }
 
-func (ipm *intermediatePieMatches) AddIntermediateMatch(year, bracketNumber int, bracket *Bracket) {
+func (ipm *intermediatePieMatches) AddIntermediateMatch(year, bracketNumber int, bracketType string, bracket *Bracket) {
 	if bracket.Dummy {
 		return
 	}
@@ -44,14 +46,15 @@ func (ipm *intermediatePieMatches) AddIntermediateMatch(year, bracketNumber int,
 	}
 
 	ipm.Sortable = append(ipm.Sortable, &intermediatePieMatch{
-		Id:        bracket.Poll.ID,
-		Year:      year,
-		Bracket:   bracketNumber,
-		Round:     bracket.RoundNumber,
-		PieA:      choiceA.Text,
-		PieB:      choiceB.Text,
-		PieAVotes: choiceA.Votes,
-		PieBVotes: choiceB.Votes,
+		Id:          bracket.Poll.ID,
+		Year:        year,
+		Bracket:     bracketNumber,
+		BracketType: bracketType,
+		Round:       bracket.RoundNumber,
+		PieA:        strings.TrimSpace(choiceA.Text),
+		PieB:        strings.TrimSpace(choiceB.Text),
+		PieAVotes:   choiceA.Votes,
+		PieBVotes:   choiceB.Votes,
 	})
 }
 
